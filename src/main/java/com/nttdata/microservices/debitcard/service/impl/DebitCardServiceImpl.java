@@ -34,7 +34,7 @@ public class DebitCardServiceImpl implements DebitCardService {
 
   @Override
   public Flux<DebitCardDto> findAll() {
-    return debitRepository.findAll()
+    return debitRepository.findAll(true)
         .map(debitMapper::toDto);
   }
 
